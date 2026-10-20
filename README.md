@@ -7,6 +7,8 @@ It detects Android / iOS / in-app webview / desktop and shows the matching butto
 (Android uses an `intent://` link that opens the `session://add#<id>` deeplink handled by the app,
 falling back to Google Play).
 
-## Optional: Android App Links
-To open the app directly from `https://getsession.org/add` (without the page), host
-`/.well-known/assetlinks.json` on the domain with the app's package and signing SHA-256 fingerprint.
+## Android App Links
+`.well-known/assetlinks.json` must be served at `https://getsession.org/.well-known/assetlinks.json`
+(HTTP 200, `Content-Type: application/json`, no redirects). It lists the SHA-256 signing fingerprints
+of `network.loki.messenger` (GitHub, Huawei and Google Play releases, from the app's README).
+F-Droid builds are signed by F-Droid and debug builds use a different package, so neither is included.
