@@ -60,7 +60,9 @@
       button(buttons, 'Open in Session', deepLink);
       if (!IS_DEBUG) button(buttons, 'Install Session', IOS_URL, true);
     } else {
-      hint.textContent = 'Open this link on your phone, or copy the Account ID above and paste it in Session > New Message.';
+      hint.textContent = 'Open Session on your computer to add this contact, or copy the Account ID above and paste it in Session > New Message.';
+      // Session Desktop registers the sessionmessenger:// protocol (macOS, Windows and Linux)
+      button(buttons, 'Open in Session Desktop', deepLink);
       var copyId = el('button', { className: 'btn', textContent: 'Copy Account ID' });
       copyId.onclick = function () {
         navigator.clipboard.writeText(id).then(function () { copyId.textContent = 'Copied!'; });

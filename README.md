@@ -22,3 +22,7 @@ F-Droid builds are signed by F-Droid, so they are not included.
 associates `/add/*` and `/add-debug/*` with the app ID `<TeamID>.com.loki-project.loki-messenger`.
 The team ID in the file (`SUQ8J2PCT7`) is the one in the iOS project; replace it when testing with your own signing team.
 The iOS page button opens `sessionmessenger://add#<id>`.
+
+## Desktop
+On desktop browsers the page offers "Open in Session Desktop" (`sessionmessenger://add#<id>`, the protocol registered
+by Session Desktop on macOS, Windows and Linux), plus copy-ID and download buttons.
