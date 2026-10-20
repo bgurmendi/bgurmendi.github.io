@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Add contact on Session (debug)</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; margin: 0; display: flex; justify-content: center; }
+  main { width: 100%; max-width: 28rem; padding: 2rem 1.25rem; box-sizing: border-box; }
+  h1 { font-size: 1.4rem; }
+  .id { font-family: ui-monospace, monospace; word-break: break-all; padding: .75rem; border-radius: .5rem;
+        background: rgba(128,128,128,.15); font-size: .9rem; }
+  .btn { display: block; width: 100%; box-sizing: border-box; margin: .6rem 0; padding: .85rem; border: 0;
+         border-radius: .5rem; font: inherit; font-weight: 600; text-align: center; text-decoration: none;
+         cursor: pointer; background: #00c853; color: #000; }
+  .btn.secondary { background: rgba(128,128,128,.25); color: inherit; }
+  .note { font-size: .9rem; opacity: .8; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Add contact on Session</h1>
+  <p id="error" hidden>This link is missing a valid Account ID.</p>
+  <div id="content" hidden>
+    <div class="id" id="accountId"></div>
+    <p class="note" id="hint"></p>
+    <div id="buttons"></div>
+  </div>
+</main>
+<script src="/link.js" data-package="network.loki.messenger.debug" data-debug="true"></script>
+</body>
+</html>
