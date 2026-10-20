@@ -16,3 +16,9 @@ falling back to Google Play).
 of `network.loki.messenger` (GitHub, Huawei and Google Play releases, from the app's README), plus
 `network.loki.messenger.debug` with the repo's `etc/debug.keystore` fingerprint.
 F-Droid builds are signed by F-Droid, so they are not included.
+
+## iOS Universal Links
+`apple-app-site-association` (served at `/apple-app-site-association` and `/.well-known/apple-app-site-association`)
+associates `/add/*` and `/add-debug/*` with the app ID `<TeamID>.com.loki-project.loki-messenger`.
+The team ID in the file (`SUQ8J2PCT7`) is the one in the iOS project; replace it when testing with your own signing team.
+The iOS page button opens `sessionmessenger://add#<id>`.

@@ -34,7 +34,7 @@
     error.hidden = true; content.hidden = false;
     document.getElementById('accountId').textContent = id;
 
-    var deepLink = 'session://add#' + id;
+    var deepLink = 'sessionmessenger://add#' + id;
     var hint = document.getElementById('hint');
 
     if (isWebview) {
